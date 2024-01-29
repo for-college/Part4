@@ -1,5 +1,6 @@
 ﻿namespace Part4
 {
+    /** Сущность Company является главной сущностью **/
     public class Company
     {
         public int Id { get; set; }
