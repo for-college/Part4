@@ -17,5 +17,19 @@ namespace Part4
         {
             optionsBuilder.UseSqlite(connectionString);
         }
+
+        // 4 пункт в главе
+        /** 
+         *  public DbSet<User> Users { get; set; } = null!;
+            public DbSet<Company> Companies { get; set; } = null!;
+            public DbSet<City> Cities { get; set; } = null!;
+            public DbSet<Country> Countries { get; set; } = null!;
+            public DbSet<Position> Positions { get; set; } = null!;
+
+            protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+            {
+                optionsBuilder.UseSqlite("Data Source=helloapp.db");
+            }
+        **/
     }
 }

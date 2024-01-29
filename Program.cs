@@ -11,7 +11,10 @@
             // Example2();
 
             // #3
-            Example3();
+            // Example3();
+
+            // #4
+            // Example4();
         }
 
         public static void Example1()
@@ -106,5 +109,60 @@
             users = [.. db.Users];
             foreach (User user in users) Console.WriteLine(user.Name);
         }
+
+        static void Example4()
+        {
+            //using (ApplicationContext db = new())
+            //{
+            //    // Пересоздадим базу данных
+            //    db.Database.EnsureDeleted();
+            //    db.Database.EnsureCreated();
+
+            //    Position manager = new() { Name = "Manager" };
+            //    Position developer = new() { Name = "Developer" };
+            //    db.Positions.AddRange(manager, developer);
+
+            //    City washington = new() { Name = "Washington" };
+            //    db.Cities.Add(washington);
+
+            //    Country usa = new() { Name = "USA", Capital = washington };
+            //    db.Countries.Add(usa);
+
+            //    Company microsoft = new() { Name = "Microsoft", Country = usa };
+            //    Company google = new() { Name = "Google", Country = usa };
+            //    db.Companies.AddRange(microsoft, google);
+
+            //    User tom = new() { Name = "Tom", Company = microsoft, Position = manager };
+            //    User bob = new() { Name = "Bob", Company = google, Position = developer };
+            //    User alice = new() { Name = "Alice", Company = microsoft, Position = developer };
+            //    User kate = new() { Name = "Kate", Company = google, Position = manager };
+            //    db.Users.AddRange(tom, bob, alice, kate);
+
+            //    db.SaveChanges();
+            //}
+
+            //using (ApplicationContext db = new())
+            //{
+            //    // Получаем пользователей
+            //    var users = db.Users
+            //        // добавляем данные по компаниям
+            //        .Include(u => u.Company)
+            //        // к компании добавляем страну 
+            //        .ThenInclude(comp => comp!.Country)
+            //        // к стране добавляем столицу
+            //        .ThenInclude(count => count!.Capital)
+            //        // добавляем данные по должностям
+            //        .Include(u => u.Position)
+            //        .ToList();
+
+            //    foreach (var user in users)
+            //    {
+            //        Console.WriteLine($"{user.Name} - {user.Position?.Name}");
+            //        Console.WriteLine($"{user.Company?.Name} - {user.Company?.Country?.Name} - {user.Company?.Country?.Capital?.Name}");
+            //        Console.WriteLine("----------------------");
+            //    }
+            //}
+        }
+
     }
 }
