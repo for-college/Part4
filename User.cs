@@ -25,5 +25,20 @@
         //public int? CompanyInfoKey { get; set; }
         //[ForeignKey("CompanyInfoKey")]
         //public Company? Company { get; set; }
+
+        /** 
+         * Каскадное удаление
+         * Если не указан внешний ключ, а нав. свойство не поддерживает nullable тип
+         **/
+        // #1 Способ
+        //public Company Company
+        //{
+        //    set => company = value;
+        //    get => company ?? throw new InvalidOperationException("Uninitialized property: Company");
+        //}
+
+        // #2 Способ
+        // [Required]
+        // public Company? Company { get; set; }
     }
 }
