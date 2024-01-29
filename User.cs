@@ -17,5 +17,13 @@
         public int CompanyId { get; set; }
         /** Нав. свойство **/
         public Company? Company { get; set; }
+
+        /** 
+         * Способ №2
+         * Аннотация данных
+         **/
+        //public int? CompanyInfoKey { get; set; }
+        //[ForeignKey("CompanyInfoKey")]
+        //public Company? Company { get; set; }
     }
 }
